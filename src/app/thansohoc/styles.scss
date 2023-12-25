@@ -1,0 +1,414 @@
+$primary-color: #eeb50a;
+$hover-color: #d49a4d;
+$red-highlight-color: #871414;
+.thansohoc-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  .form-input {
+    display: grid;
+    grid-template-columns: 200px 130px auto;
+    gap: 10px;
+  }
+}
+.thansohoc {
+  gap: 20px;
+  .width {
+    min-width: 100px;
+    max-width: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .name-number-container {
+    display: grid;
+    grid-template-columns: auto 50px;
+    gap: 10px;
+    font-size: 20px;
+    .name-number {
+      .number-child,
+      .name-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 12px;
+      }
+    }
+    .main-num {
+      .main-num-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main-num-child:last-child {
+        margin: 0 !important;
+      }
+    }
+    .name-num-result {
+      justify-content: space-between;
+      align-items: end;
+      .result {
+        color: $red-highlight-color;
+        font-weight: 600;
+        padding: 0 8px;
+        background: $primary-color;
+        border-radius: 6px;
+      }
+    }
+  }
+  .matrix-n-alphabet {
+    margin-top: 20px;
+  }
+  .matrix {
+    position: relative;
+    .arrow {
+      position: absolute;
+    }
+    .col1 {
+      top: -16px;
+      left: 80px;
+      svg {
+        path {
+          fill: #fd944e;
+        }
+      }
+    }
+    .col2 {
+      top: -16px;
+      left: 180px;
+      svg {
+        path {
+          fill: #7a3cb7;
+        }
+      }
+    }
+    .col3 {
+      top: -16px;
+      left: 200px;
+      svg {
+        path {
+          fill: #3cb73c;
+        }
+      }
+    }
+    .row1 {
+      transform: rotate(90deg);
+      left: 150px;
+      top: -103px;
+      svg {
+        path {
+          fill: #6b6b79;
+        }
+      }
+    }
+    .row2 {
+      transform: rotate(90deg);
+      left: 150px;
+      top: -35px;
+      svg {
+        path {
+          fill: #abb6fb;
+        }
+      }
+    }
+    .row3 {
+      transform: rotate(90deg);
+      left: 150px;
+      top: 32px;
+      svg {
+        path {
+          fill: #ff5050;
+        }
+      }
+    }
+    .cross1 {
+      transform: rotate(124deg);
+      top: -51px;
+      left: 138px;
+      svg {
+        path {
+          fill: #cac841;
+        }
+      }
+    }
+    .cross2 {
+      transform: rotate(58deg);
+      top: -58px;
+      left: 150px;
+      svg {
+        path {
+          fill: #d3d3d3;
+        }
+      }
+    }
+  }
+  .alphabet {
+    thead {
+      th {
+        background-color: $primary-color;
+      }
+      th:first-child {
+        border-top-left-radius: 6px;
+      }
+      th:last-child {
+        border-top-right-radius: 6px;
+      }
+    }
+    td,
+    th {
+      text-align: center;
+      padding: 10px 15px;
+    }
+    table {
+      border-collapse: collapse;
+      border-radius: 6px;
+      border-style: hidden;
+      box-shadow: 0 0 0 1px #ffffff;
+    }
+    th,
+    td {
+      border: 1px solid #ffffff;
+    }
+  }
+  .sinChart {
+    font-size: 1.125rem;
+    position: relative;
+    padding: 50px;
+    width: 600px;
+    .sin-num {
+      position: absolute;
+    }
+    .position {
+      position: absolute;
+      color: #bf0303;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translate(-15px, 5px);
+      gap: 3px;
+    }
+
+    #sin-num-1 {
+      top: 20px;
+      left: 45px;
+    }
+    #sin-num-2 {
+      top: 111px;
+      left: 60px;
+    }
+    #sin-num-3 {
+      top: 195px;
+      left: 100px;
+    }
+    #sin-num-4 {
+      bottom: 30px;
+      left: 165px;
+    }
+    #sin-num-5 {
+      top: 190px;
+      left: 235px;
+    }
+    #sin-num-6 {
+      top: 130px;
+      left: 305px;
+    }
+    #sin-num-7 {
+      bottom: 31px;
+      right: 162px;
+    }
+    #sin-num-8 {
+      bottom: 136px;
+      right: 76px;
+    }
+    #sin-num-9 {
+      top: 30px;
+      right: 45px;
+    }
+  }
+
+  .pyramidChart {
+    font-size: 18px;
+    position: relative;
+    width: 400px;
+    padding: 20px;
+    margin-top: 20px;
+    label {
+      position: absolute;
+    }
+    #char-top1 {
+      top: -10px;
+      left: 50%;
+    }
+    #char-top2 {
+      left: 50%;
+      top: 25%;
+    }
+    #char-top3-l {
+      top: 53%;
+      left: 22%;
+    }
+    #char-top3-r {
+      top: 53%;
+      right: 22%;
+    }
+    #num-top1 {
+      left: 47%;
+      top: 35px;
+    }
+    #num-top2 {
+      left: 49%;
+      top: 37%;
+    }
+    #num-top3-l {
+      left: 27%;
+      top: 69%;
+    }
+    #num-top3-r {
+      right: 27%;
+      top: 69%;
+    }
+    #num-bot-l {
+      left: 20px;
+    }
+    #num-bot-m {
+      left: 50%;
+    }
+    #num-bot-r {
+      right: 20px;
+    }
+    .peak {
+      color: $primary-color;
+    }
+    .num-bot {
+      font-size: 26px;
+    }
+    .red-num {
+      color: #bf0303;
+    }
+  }
+
+  .formula {
+    font-size: 25px;
+    padding: 5px 10px;
+    background: $primary-color;
+    color: #000;
+    font-weight: 500;
+    border-radius: 6px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .thansohoc {
+    .matrix-n-alphabet {
+      flex-direction: column;
+    }
+  }
+}
+@media only screen and (max-width: 514px) {
+  .form-input {
+    grid-template-columns: 200px 150px !important;
+    .ant-btn {
+      width: 360px;
+    }
+  }
+  .thansohoc {
+    gap: 30px !important;
+    .matrix-n-alphabet {
+      flex-direction: column;
+    }
+    .alphabet {
+      th,
+      td {
+        padding: 10px 12px !important;
+      }
+    }
+    .sinChart {
+      width: 450px !important;
+      font-size: 1rem !important;
+      .position {
+        font-size: 1rem !important;
+      }
+      #sin-num-2 {
+        top: 90px !important;
+        left: 57px !important;
+      }
+      #sin-num-3 {
+        top: 151px !important;
+        left: 82px !important;
+      }
+      #sin-num-4 {
+        bottom: 40px !important;
+        left: 130px !important;
+      }
+      #sin-num-5 {
+        top: 146px !important;
+        left: 178px !important;
+      }
+      #sin-num-6 {
+        top: 103px !important;
+        left: 229px !important;
+      }
+      #sin-num-7 {
+        bottom: 40px !important;
+        right: 127px !important;
+      }
+      #sin-num-8 {
+        bottom: 108px !important;
+        right: 67px !important;
+      }
+    }
+    .pyramidChart {
+      width: 360px;
+      font-size: 1rem !important;
+      margin: 30px 0 !important;
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  .name-number-container {
+    grid-template-columns: auto !important;
+    .name-num-result {
+      gap: 12px;
+      justify-content: center !important;
+    }
+  }
+}
+.ant-btn {
+  color: #000000;
+  background-color: $primary-color !important;
+  &:hover {
+    color: #000000 !important;
+    background-color: $hover-color !important;
+  }
+}
+:where(.css-dev-only-do-not-override-1adbn6x).ant-btn-primary:not(
+    :disabled
+  ):not(.ant-btn-disabled):hover {
+  color: #fff;
+  background-color: $hover-color !important;
+}
+:where(.css-dev-only-do-not-override-1adbn6x).ant-picker-focused.ant-picker {
+  border-color: $hover-color !important;
+}
+:where(.css-dev-only-do-not-override-1adbn6x).ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-selected
+  .ant-picker-cell-inner,
+:where(.css-dev-only-do-not-override-1adbn6x).ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-range-start
+  .ant-picker-cell-inner,
+:where(.css-dev-only-do-not-override-1adbn6x).ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-range-end
+  .ant-picker-cell-inner {
+  background: $primary-color !important;
+}
+:where(.css-dev-only-do-not-override-1adbn6x).ant-picker-dropdown
+  .ant-picker-header-view
+  button:hover {
+  color: $primary-color;
+}
+:where(.css-dev-only-do-not-override-1adbn6x).ant-input:hover {
+  border-color: $primary-color;
+}
+:where(.css-dev-only-do-not-override-1adbn6x).ant-picker:hover {
+  border-color: $primary-color;
+}
