@@ -35,8 +35,8 @@ export default function ThanSoHoc() {
     name: "",
   });
   const [inputData, setInputData] = useState<InputData>({
-    birthDay: "1994-11-25",
-    name: "Hoàng Phú Tùng",
+    birthDay: "2000-04-03",
+    name: "Phạm Trung Anh Dũng",
   });
   const [dataP, setDataP] = useState<number | null>(null);
   const matrix = {
@@ -112,36 +112,6 @@ export default function ThanSoHoc() {
     content: () => printRef.current,
   });
 
-  const handleGetData = () => {
-    const data: any = new FormData();
-    const head: any = new Headers();
-    data.append("entry.61077295", inputData.name);
-    data.append(
-      "entry.98253014",
-      moment(inputData.birthDay, "YYYY-MM-DD").format("DD/MM/YYYY")
-    );
-    head.append("Access-Control-Allow-Origin", "http://pathlife.workvn.net");
-
-    let request = {
-      method: "post",
-      maxBodyLength: Infinity,
-      url: "https://docs.google.com/forms/d/e/1FAIpQLSdxxIDu0wyZR0b7HNVD7idvuO8y-ThkVzGGxAXO1Uufk7Chaw/formResponse",
-      headers: {
-        ...head,
-      },
-      data: data,
-    };
-
-    axios
-      .request(request)
-      .then((response) => {
-        console.log(JSON.stringify(response.data));
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
   useEffect(() => {
     handleViewData();
   }, []);
@@ -200,7 +170,6 @@ export default function ThanSoHoc() {
           type="primary"
           onClick={() => {
             handleViewData();
-            handleGetData();
           }}
         >
           Kiểm tra
